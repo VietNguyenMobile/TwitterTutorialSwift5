@@ -17,6 +17,7 @@ class FeedController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .yellow
+        title = "Feed"
     }
     
     // MARK: - Helpers
