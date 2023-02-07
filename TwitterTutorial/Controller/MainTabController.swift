@@ -17,9 +17,31 @@ class MainTabController: UITabBarController {
         super.viewDidLoad()
         UINavigationBar.appearance().barTintColor = .red
         configureViewControllers()
+        configureUI()
     }
     
     // MARK: - Helpers
+    
+    let actionButon: UIButton = {
+        let button = UIButton(type: .system)
+        button.tintColor = .white
+        button.backgroundColor = .blue
+        button.setImage(UIImage(named:"new_tweet"), for: .normal)
+        return button
+    }()
+    
+    func configureUI() {
+        view.addSubview(actionButon)
+//        actionButon.translatesAutoresizingMaskIntoConstraints = false
+//        actionButon.heightAnchor.constraint(equalToConstant: 56).isActive = true
+//        actionButon.widthAnchor.constraint(equalToConstant: 56).isActive = true
+//        actionButon.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -64).isActive = true
+//        actionButon.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
+//        actionButon.layer.cornerRadius = 56/2
+        actionButon.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 64, paddingRight: 16, width: 56, height: 56)
+        actionButon.layer.cornerRadius = 56/2
+    }
+    
     
     func configureViewControllers() {
         let feed = FeedController()
