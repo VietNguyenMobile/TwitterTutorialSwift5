@@ -19,6 +19,12 @@ class RegistrationController: UIViewController {
         return iv
     }()
     
+    private let alreadyHaveAccountButton: UIButton = {
+        let button = Utilities().attributedButton("Already have an account?", " Sign In")
+        button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -28,12 +34,32 @@ class RegistrationController: UIViewController {
     
     // MARK: - Selectors
     
+    @objc func handleShowLogin() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: - Helpers
     
     func configureUI() {
         view.backgroundColor = .twitterBlue
+        title = "Login"
         navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.isHidden = true
+
+//        view.addSubview(logoImageView)
+//        logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
+//        logoImageView.setDimensions(width: 150, height: 150)
+//
+//        let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton])
+//        stack.axis = .vertical
+//        stack.spacing = 20
+//        stack.distribution = .fillEqually
+//
+//        view.addSubview(stack)
+//        stack.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
+        view.addSubview(alreadyHaveAccountButton)
+        alreadyHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                     right: view.rightAnchor, paddingLeft: 40, paddingRight: 40)
     }
 }
 
