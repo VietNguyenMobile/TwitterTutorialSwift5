@@ -10,6 +10,8 @@ import UIKit
 class RegistrationController: UIViewController {
     
     // MARK: - Properties
+    
+    private let imagePicker = UIImagePickerController()
 
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -103,15 +105,19 @@ class RegistrationController: UIViewController {
     @objc func handleSignUp() {
         print("handleSignUp")
     }
+    
     @objc func handleAddProfilePhoto() {
-        print("handleAddProfilePhoto")
+        present(imagePicker, animated: true, completion: nil)
     }
     
     // MARK: - Helpers
     
     func configureUI() {
         view.backgroundColor = .twitterBlue
-        title = "Login"
+        
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isHidden = true
 
@@ -141,3 +147,22 @@ class RegistrationController: UIViewController {
     }
 }
 
+// MARK: - UIImagePickerControllerDelegate
+
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let profileImage = info[.editedImage] as? UIImage else { return }
+        
+        plusPhotoButton.layer.cornerRadius = 128 / 2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.imageView?.contentMode = .scaleAspectFill
+        plusPhotoButton.imageView?.clipsToBounds = true
+        plusPhotoButton.layer.borderColor = UIColor.white.cgColor
+        plusPhotoButton.layer.borderWidth = 3
+        
+        self.plusPhotoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        dismiss(animated: true )
+    }
+    
+}
