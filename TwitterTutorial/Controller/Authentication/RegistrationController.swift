@@ -7,12 +7,14 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class RegistrationController: UIViewController {
     
     // MARK: - Properties
     
     private let imagePicker = UIImagePickerController()
+//    private var profileImage = UIImage?
 
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -106,8 +108,14 @@ class RegistrationController: UIViewController {
     @objc func handleSignUp() {
         print("handleSignUp")
         
+//        guard let profileImage = profileImage else {
+//            print("DEBUG: Please select a profile image ...")
+//            return
+//        }
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
+        guard let fullName = fullNameTextField.text else { return }
+        guard let username = userNameTextField.text else { return }
         
         print("DEBUG: Email is \(email)")
         print("DEBUG: Password is \(password)")
@@ -119,6 +127,21 @@ class RegistrationController: UIViewController {
             }
             
             print("DEBUG: Successfully registered user")
+            guard let uid = result?.user.uid else { return }
+            
+            print("DEBUG: Successfully registered user \(uid)")
+            
+            let values = ["email": email, "username": username, "fullname": fullName]
+            
+            print("DEBUG: Successfully registered values \(values)")
+            
+            let ref = Database.database().reference().child("users").child(uid)
+            
+            ref.updateChildValues(values) {
+                (error, ref) in
+                print("DEBUG: Successfully updated user information..")
+            }
+            
         }
     }
     
@@ -169,6 +192,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let profileImage = info[.editedImage] as? UIImage else { return }
+//        self.profileImage = profileImage
         
         plusPhotoButton.layer.cornerRadius = 128 / 2
         plusPhotoButton.layer.masksToBounds = true
