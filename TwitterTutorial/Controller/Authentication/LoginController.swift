@@ -86,10 +86,6 @@ class LoginController: UIViewController {
         title = "Login"
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isHidden = true
-//        navigationController?.navigationBar.prefersLargeTitles = true
-        
-//        navigationBar.barTintColor = .white
-//        navigationController?.navigationBar.backgroundColor = .white
         
         view.addSubview(logoImageView)
         logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
