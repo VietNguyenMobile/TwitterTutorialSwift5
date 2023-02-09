@@ -14,8 +14,8 @@ class RegistrationController: UIViewController {
     // MARK: - Properties
     
     private let imagePicker = UIImagePickerController()
-//    private var profileImage = UIImage?
-
+    private var profileImage: UIImage?
+    
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
@@ -108,40 +108,47 @@ class RegistrationController: UIViewController {
     @objc func handleSignUp() {
         print("handleSignUp")
         
-//        guard let profileImage = profileImage else {
-//            print("DEBUG: Please select a profile image ...")
-//            return
-//        }
+        guard let profileImage = profileImage else {
+            print("DEBUG: Please select a profile image ...")
+            return
+        }
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let fullName = fullNameTextField.text else { return }
         guard let username = userNameTextField.text else { return }
         
-        print("DEBUG: Email is \(email)")
-        print("DEBUG: Password is \(password)")
+        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
+        let filename = NSUUID().uuidString
+        let storageRef = STORAGE_PROFILE_IMAGES.child(filename)
         
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            if let error = error {
-                print("DEBUG: Error is \(error.localizedDescription)")
-                return
+        storageRef.putData(imageData, metadata: nil) { (meta, error) in
+            storageRef.downloadURL { (url, error) in
+                guard let profileImageUrl = url?.absoluteString else { return }
+                
+                Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                    if let error = error {
+                        print("DEBUG: Error is \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    print("DEBUG: Successfully registered user")
+                    guard let uid = result?.user.uid else { return }
+                    
+                    print("DEBUG: Successfully registered user \(uid)")
+                    
+                    let values = ["email": email,
+                                  "username": username,
+                                  "fullname": fullName,
+                                  "profileImageUrl": profileImageUrl]
+                    
+                    print("DEBUG: Successfully registered values \(values)")
+                    
+                    REF_USERS.child(uid).updateChildValues(values) {
+                        (error, ref) in
+                        print("DEBUG: Successfully updated user information..")
+                    }
+                }
             }
-            
-            print("DEBUG: Successfully registered user")
-            guard let uid = result?.user.uid else { return }
-            
-            print("DEBUG: Successfully registered user \(uid)")
-            
-            let values = ["email": email, "username": username, "fullname": fullName]
-            
-            print("DEBUG: Successfully registered values \(values)")
-            
-            let ref = Database.database().reference().child("users").child(uid)
-            
-            ref.updateChildValues(values) {
-                (error, ref) in
-                print("DEBUG: Successfully updated user information..")
-            }
-            
         }
     }
     
@@ -159,11 +166,11 @@ class RegistrationController: UIViewController {
         
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isHidden = true
-
+        
         view.addSubview(plusPhotoButton)
         plusPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
         plusPhotoButton.setDimensions(width: 128, height: 128)
-
+        
         let stack = UIStackView(arrangedSubviews: [emailContainerView,
                                                    passwordContainerView,
                                                    fullNameContainerView,
@@ -172,7 +179,7 @@ class RegistrationController: UIViewController {
         stack.axis = .vertical
         stack.spacing = 20
         stack.distribution = .fillEqually
-
+        
         view.addSubview(stack)
         stack.anchor(top: plusPhotoButton.bottomAnchor,
                      left: view.leftAnchor,
@@ -182,7 +189,7 @@ class RegistrationController: UIViewController {
         
         view.addSubview(alreadyHaveAccountButton)
         alreadyHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                                     right: view.rightAnchor, paddingLeft: 40, paddingRight: 40)
+                                        right: view.rightAnchor, paddingLeft: 40, paddingRight: 40)
     }
 }
 
@@ -192,7 +199,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let profileImage = info[.editedImage] as? UIImage else { return }
-//        self.profileImage = profileImage
+        self.profileImage = profileImage
         
         plusPhotoButton.layer.cornerRadius = 128 / 2
         plusPhotoButton.layer.masksToBounds = true
@@ -202,7 +209,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         plusPhotoButton.layer.borderWidth = 3
         
         self.plusPhotoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
-        dismiss(animated: true )
+        dismiss(animated: true, completion: nil)
     }
     
 }

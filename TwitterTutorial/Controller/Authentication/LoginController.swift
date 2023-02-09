@@ -10,9 +10,9 @@ import UIKit
 class LoginController: UIViewController {
     
     // MARK: - Properties
-
+    
     private let logoImageView: UIImageView = {
-       let iv = UIImageView()
+        let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
         iv.image = UIImage(named: "TwitterLogo")
@@ -61,7 +61,7 @@ class LoginController: UIViewController {
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
-        
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
