@@ -17,8 +17,7 @@ class MainTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .twitterBlue
-//        UINavigationBar.appearance().barTintColor = .red
-//        logUserOut()
+        logUserOut()
         authenticateUserAndConfigureUI()
     }
     
