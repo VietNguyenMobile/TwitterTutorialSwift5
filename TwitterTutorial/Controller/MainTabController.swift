@@ -17,11 +17,15 @@ class MainTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .twitterBlue
-        logUserOut()
+//        logUserOut()
         authenticateUserAndConfigureUI()
     }
     
     // MARK: - API
+    
+    func fetchUser() {
+        UserService.shared.fetchUser()
+    }
     
     func authenticateUserAndConfigureUI() {
         if Auth.auth().currentUser == nil {
@@ -35,6 +39,7 @@ class MainTabController: UITabBarController {
             print("DUBUG: User is logged in..")
             configureViewControllers()
             configureUI()
+            fetchUser()
         }
     }
     
