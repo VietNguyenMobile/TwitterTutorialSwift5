@@ -25,8 +25,15 @@ struct UserService {
             
             print("DEBUG: Dictionary is \(dictionary)")
             
-            guard let username = dictionary["username"] as? String else { return }
-            print("DEBUG: Username is \(username)")
+//            guard let username = dictionary["username"] as? String else { return }
+//            print("DEBUG: Username is \(username)")
+            
+            let user = User(uid: uid, dictionary: dictionary)
+            
+            print("DEBUG: Username is \(user.username)")
+            print("DEBUG: Fullname is \(user.fullname)")
+            print("DEBUG: ProfileImageUrl is \(user.profileImageUrl)")
+            print("DEBUG: Email is \(user.email)")
         }
     }
 }
