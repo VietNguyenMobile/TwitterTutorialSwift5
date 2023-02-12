@@ -104,6 +104,9 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - PromisesObjC (2.1.1)
+  - SDWebImage (5.14.3):
+    - SDWebImage/Core (= 5.14.3)
+  - SDWebImage/Core (5.14.3)
 
 DEPENDENCIES:
   - FirebaseAnalytics
@@ -112,6 +115,7 @@ DEPENDENCIES:
   - FirebaseCrashlytics
   - FirebaseDatabase
   - FirebaseStorage
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
@@ -133,6 +137,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SDWebImage
 
 SPEC CHECKSUMS:
   FirebaseAnalytics: 036232b6a1e2918e5f67572417be1173576245f3
@@ -153,7 +158,8 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+  SDWebImage: 9c36e66c8ce4620b41a7407698dda44211a96764
 
-PODFILE CHECKSUM: 33d67951eb437172bde553368ca454531393dcc3
+PODFILE CHECKSUM: 25c9422306d1a004fe03e53981fcc85e446c457d
 
 COCOAPODS: 1.11.3

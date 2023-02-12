@@ -24,6 +24,10 @@
 		FA8F85642992A41100B11798 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F85632992A41100B11798 /* RegistrationController.swift */; };
 		FAF2F8A8299382CE005F74AF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8A7299382CE005F74AF /* Utilities.swift */; };
 		FAF2F8AA2994D3E2005F74AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAF2F8A92994D3E2005F74AF /* GoogleService-Info.plist */; };
+		FAF2F8AC29954E10005F74AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8AB29954E10005F74AF /* Constants.swift */; };
+		FAF2F8AE2995F8FD005F74AF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8AD2995F8FD005F74AF /* AuthService.swift */; };
+		FAF2F8B0299633CB005F74AF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8AF299633CB005F74AF /* UserService.swift */; };
+		FAF2F8B229989DD5005F74AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8B129989DD5005F74AF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		FA8F85632992A41100B11798 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		FAF2F8A7299382CE005F74AF /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FAF2F8A92994D3E2005F74AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAF2F8AB29954E10005F74AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FAF2F8AD2995F8FD005F74AF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FAF2F8AF299633CB005F74AF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		FAF2F8B129989DD5005F74AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +84,6 @@
 				04BBA7C29A203FCE50E3154B /* Pods-TwitterTutorial.debug.xcconfig */,
 				7A6D6DF3EE03C2DE56532E21 /* Pods-TwitterTutorial.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,6 +131,7 @@
 			children = (
 				FA8F855E29924D4400B11798 /* Extensions.swift */,
 				FAF2F8A7299382CE005F74AF /* Utilities.swift */,
+				FAF2F8AB29954E10005F74AF /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -131,6 +139,8 @@
 		FA8F85232991618300B11798 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FAF2F8AD2995F8FD005F74AF /* AuthService.swift */,
+				FAF2F8AF299633CB005F74AF /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -165,6 +175,7 @@
 		FA8F85272991619E00B11798 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FAF2F8B129989DD5005F74AF /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,14 +309,18 @@
 				FA8F855F29924D4400B11798 /* Extensions.swift in Sources */,
 				FA8F850F2991601500B11798 /* AppDelegate.swift in Sources */,
 				FA8F853329920FC500B11798 /* ConversationsController.swift in Sources */,
+				FAF2F8B229989DD5005F74AF /* User.swift in Sources */,
 				FA8F852D29920F0600B11798 /* FeedController.swift in Sources */,
 				FA8F852B2991636E00B11798 /* MainTabController.swift in Sources */,
 				FAF2F8A8299382CE005F74AF /* Utilities.swift in Sources */,
+				FAF2F8AC29954E10005F74AF /* Constants.swift in Sources */,
 				FA8F85642992A41100B11798 /* RegistrationController.swift in Sources */,
 				FA8F853129920F9100B11798 /* NotificationsController.swift in Sources */,
 				FA8F85112991601500B11798 /* SceneDelegate.swift in Sources */,
+				FAF2F8B0299633CB005F74AF /* UserService.swift in Sources */,
 				FA8F852F29920F6100B11798 /* ExploreController.swift in Sources */,
 				FA8F85622992A30D00B11798 /* LoginController.swift in Sources */,
+				FAF2F8AE2995F8FD005F74AF /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

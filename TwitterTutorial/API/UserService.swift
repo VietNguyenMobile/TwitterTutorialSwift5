@@ -11,7 +11,7 @@ import FirebaseAuth
 struct UserService {
     static let shared = UserService()
     
-    func fetchUser() {
+    func fetchUser(completion: @escaping(User) -> Void) {
         print("DEBUG: Fetch current user info..")
         
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -34,6 +34,8 @@ struct UserService {
             print("DEBUG: Fullname is \(user.fullname)")
             print("DEBUG: ProfileImageUrl is \(user.profileImageUrl)")
             print("DEBUG: Email is \(user.email)")
+            
+            completion(user)
         }
     }
 }

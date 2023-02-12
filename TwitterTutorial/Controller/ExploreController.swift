@@ -24,6 +24,10 @@ class ExploreController: UIViewController {
         view.backgroundColor = .white
         
         navigationItem.title = "Explore"
+        
+//        UINavigationBar.appearance().barTintColor = .black
+//        UINavigationBar.appearance().tintColor = .white
+//        UINavigationBar.appearance().isTranslucent = true
     }
     
 }

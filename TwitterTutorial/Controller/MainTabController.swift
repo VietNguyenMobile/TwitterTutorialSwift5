@@ -12,6 +12,17 @@ class MainTabController: UITabBarController {
     
     // MARK: - Properties
     
+    var user: User? {
+        didSet {
+            print("DEBUG: Did set user in main tab..")
+            
+            guard let nav = viewControllers?[0] as? UINavigationController else { return }
+            guard let feed = nav.viewControllers.first as? FeedController else { return }
+            
+            feed.user = user
+        }
+    }
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -24,7 +35,10 @@ class MainTabController: UITabBarController {
     // MARK: - API
     
     func fetchUser() {
-        UserService.shared.fetchUser()
+        UserService.shared.fetchUser { user in
+            print("DEBUG: Main tab user is \(user)")
+            self.user = user
+        }
     }
     
     func authenticateUserAndConfigureUI() {
@@ -83,7 +97,7 @@ class MainTabController: UITabBarController {
     func configureViewControllers() {
         let feed = FeedController()
         let nav1 = templateNavigationController(image: UIImage(named: "home_unselected"), rootViewController: feed)
-        nav1.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+//        nav1.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
         
         let explore = ExploreController()
         let nav2 = templateNavigationController(image: UIImage(named: "search_unselected"), rootViewController: explore)
@@ -94,7 +108,7 @@ class MainTabController: UITabBarController {
         let conversations = ConversationsController()
         let nav4 = templateNavigationController(image: UIImage(named: "ic_mail_outline_white_2x-1"), rootViewController: conversations)
         
-        nav2.title = "Explore"
+//        nav2.title = "Explore"
         
         viewControllers = [nav1, nav2, nav3, nav4]
 //        setViewControllers([nav1, nav2, nav3, nav4], animated: false)
