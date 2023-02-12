@@ -28,6 +28,7 @@
 		FAF2F8AE2995F8FD005F74AF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8AD2995F8FD005F74AF /* AuthService.swift */; };
 		FAF2F8B0299633CB005F74AF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8AF299633CB005F74AF /* UserService.swift */; };
 		FAF2F8B229989DD5005F74AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8B129989DD5005F74AF /* User.swift */; };
+		FAF2F8B429993D13005F74AF /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8B329993D13005F74AF /* UploadTweetController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		FAF2F8AD2995F8FD005F74AF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		FAF2F8AF299633CB005F74AF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		FAF2F8B129989DD5005F74AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FAF2F8B329993D13005F74AF /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				FA8F852E29920F6100B11798 /* ExploreController.swift */,
 				FA8F853029920F9100B11798 /* NotificationsController.swift */,
 				FA8F853229920FC500B11798 /* ConversationsController.swift */,
+				FAF2F8B329993D13005F74AF /* UploadTweetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				FA8F855F29924D4400B11798 /* Extensions.swift in Sources */,
 				FA8F850F2991601500B11798 /* AppDelegate.swift in Sources */,
 				FA8F853329920FC500B11798 /* ConversationsController.swift in Sources */,
+				FAF2F8B429993D13005F74AF /* UploadTweetController.swift in Sources */,
 				FAF2F8B229989DD5005F74AF /* User.swift in Sources */,
 				FA8F852D29920F0600B11798 /* FeedController.swift in Sources */,
 				FA8F852B2991636E00B11798 /* MainTabController.swift in Sources */,
