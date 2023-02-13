@@ -46,6 +46,8 @@ class FeedController: UICollectionViewController {
     
     // MARK: - Helpers
     
+    
+    
     func configureUI() {
         view.backgroundColor = .white
         
@@ -67,7 +69,6 @@ class FeedController: UICollectionViewController {
         profileImageView.layer.cornerRadius = 32 / 2
         profileImageView.layer.masksToBounds = true
         
-        //        guard let profileImageUrl = URL(string: user.profileImageUrl) else { return }
         profileImageView.sd_setImage(with: user.profileImageUrl)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
@@ -85,6 +86,10 @@ extension FeedController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TweetCell
+        
+        print("DEBUG: Index path is \(indexPath.row)")
+        cell.tweet = tweets[indexPath.row]
+        
         return cell
     }
 }
