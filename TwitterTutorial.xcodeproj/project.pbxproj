@@ -34,6 +34,7 @@
 		FAF2F8BA2999F025005F74AF /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8B92999F025005F74AF /* Tweet.swift */; };
 		FAF2F8BC299A0E01005F74AF /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8BB299A0E01005F74AF /* TweetCell.swift */; };
 		FAF2F8BE299A75F6005F74AF /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8BD299A75F6005F74AF /* TweetViewModel.swift */; };
+		FAF2F8C0299A98A7005F74AF /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8BF299A98A7005F74AF /* ProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		FAF2F8B92999F025005F74AF /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		FAF2F8BB299A0E01005F74AF /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		FAF2F8BD299A75F6005F74AF /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		FAF2F8BF299A98A7005F74AF /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				FA8F853029920F9100B11798 /* NotificationsController.swift */,
 				FA8F853229920FC500B11798 /* ConversationsController.swift */,
 				FAF2F8B329993D13005F74AF /* UploadTweetController.swift */,
+				FAF2F8BF299A98A7005F74AF /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				FAF2F8B229989DD5005F74AF /* User.swift in Sources */,
 				FAF2F8B629994E84005F74AF /* CaptionTextView.swift in Sources */,
 				FA8F852D29920F0600B11798 /* FeedController.swift in Sources */,
+				FAF2F8C0299A98A7005F74AF /* ProfileController.swift in Sources */,
 				FA8F852B2991636E00B11798 /* MainTabController.swift in Sources */,
 				FAF2F8A8299382CE005F74AF /* Utilities.swift in Sources */,
 				FAF2F8BA2999F025005F74AF /* Tweet.swift in Sources */,
