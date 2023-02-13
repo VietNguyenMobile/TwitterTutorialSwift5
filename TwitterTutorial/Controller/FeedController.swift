@@ -21,8 +21,14 @@ class FeedController: UICollectionViewController {
         }
     }
     
+    private var tweets = [Tweet]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     // MARK: - Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -34,6 +40,7 @@ class FeedController: UICollectionViewController {
     func fetchTweets() {
         TweetService.shared.fetchTweets { tweets in
             print("DEBUG: FeedController tweets \(tweets)")
+            self.tweets = tweets
         }
     }
     
@@ -60,7 +67,7 @@ class FeedController: UICollectionViewController {
         profileImageView.layer.cornerRadius = 32 / 2
         profileImageView.layer.masksToBounds = true
         
-//        guard let profileImageUrl = URL(string: user.profileImageUrl) else { return }
+        //        guard let profileImageUrl = URL(string: user.profileImageUrl) else { return }
         profileImageView.sd_setImage(with: user.profileImageUrl)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
@@ -68,9 +75,12 @@ class FeedController: UICollectionViewController {
     
 }
 
+// MARK: - UICollectionViewDelegate/DataSource
+
 extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        print("DEBUG: Tweet count at time of collectionView function call is \(tweets.count)")
+        return tweets.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -79,8 +89,10 @@ extension FeedController {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
+
 extension FeedController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+        return CGSize(width: view.frame.width, height: 120)
     }
 }
