@@ -32,6 +32,7 @@
 		FAF2F8B629994E84005F74AF /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8B529994E84005F74AF /* CaptionTextView.swift */; };
 		FAF2F8B82999E6DF005F74AF /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8B72999E6DF005F74AF /* TweetService.swift */; };
 		FAF2F8BA2999F025005F74AF /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8B92999F025005F74AF /* Tweet.swift */; };
+		FAF2F8BC299A0E01005F74AF /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8BB299A0E01005F74AF /* TweetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		FAF2F8B529994E84005F74AF /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		FAF2F8B72999E6DF005F74AF /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		FAF2F8B92999F025005F74AF /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		FAF2F8BB299A0E01005F74AF /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF2F8B529994E84005F74AF /* CaptionTextView.swift */,
+				FAF2F8BB299A0E01005F74AF /* TweetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				FAF2F8AC29954E10005F74AF /* Constants.swift in Sources */,
 				FA8F85642992A41100B11798 /* RegistrationController.swift in Sources */,
 				FA8F853129920F9100B11798 /* NotificationsController.swift in Sources */,
+				FAF2F8BC299A0E01005F74AF /* TweetCell.swift in Sources */,
 				FA8F85112991601500B11798 /* SceneDelegate.swift in Sources */,
 				FAF2F8B0299633CB005F74AF /* UserService.swift in Sources */,
 				FA8F852F29920F6100B11798 /* ExploreController.swift in Sources */,
