@@ -142,5 +142,9 @@ class TweetCell: UICollectionViewCell {
         print("DEBUG: Did set tweet in cell..")
         
         captionLabel.text = tweet.caption
+        
+        profileImageView.sd_setImage(with: tweet.user.profileImageUrl)
+        infoLabel.text = tweet.user.username 
+        print("DEBUG: Tweet user is \(tweet.user.username)")
     }
 }

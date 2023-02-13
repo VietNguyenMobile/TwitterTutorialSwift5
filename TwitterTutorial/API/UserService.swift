@@ -11,10 +11,10 @@ import FirebaseAuth
 struct UserService {
     static let shared = UserService()
     
-    func fetchUser(completion: @escaping(User) -> Void) {
+    func fetchUser(uid: String, completion: @escaping(User) -> Void) {
         print("DEBUG: Fetch current user info..")
         
-        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
         
         print("DEBUG: Current uid is \(uid)")
         
