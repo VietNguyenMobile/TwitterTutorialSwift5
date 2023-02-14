@@ -35,6 +35,7 @@
 		FAF2F8BC299A0E01005F74AF /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8BB299A0E01005F74AF /* TweetCell.swift */; };
 		FAF2F8BE299A75F6005F74AF /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8BD299A75F6005F74AF /* TweetViewModel.swift */; };
 		FAF2F8C0299A98A7005F74AF /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8BF299A98A7005F74AF /* ProfileController.swift */; };
+		FAF2F8C2299B3EC6005F74AF /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C1299B3EC6005F74AF /* ProfileHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		FAF2F8BB299A0E01005F74AF /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		FAF2F8BD299A75F6005F74AF /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		FAF2F8BF299A98A7005F74AF /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		FAF2F8C1299B3EC6005F74AF /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			children = (
 				FAF2F8B529994E84005F74AF /* CaptionTextView.swift */,
 				FAF2F8BB299A0E01005F74AF /* TweetCell.swift */,
+				FAF2F8C1299B3EC6005F74AF /* ProfileHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				FAF2F8B429993D13005F74AF /* UploadTweetController.swift in Sources */,
 				FAF2F8B229989DD5005F74AF /* User.swift in Sources */,
 				FAF2F8B629994E84005F74AF /* CaptionTextView.swift in Sources */,
+				FAF2F8C2299B3EC6005F74AF /* ProfileHeader.swift in Sources */,
 				FA8F852D29920F0600B11798 /* FeedController.swift in Sources */,
 				FAF2F8C0299A98A7005F74AF /* ProfileController.swift in Sources */,
 				FA8F852B2991636E00B11798 /* MainTabController.swift in Sources */,
