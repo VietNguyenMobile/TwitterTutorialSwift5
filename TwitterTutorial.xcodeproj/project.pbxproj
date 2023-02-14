@@ -36,6 +36,8 @@
 		FAF2F8BE299A75F6005F74AF /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8BD299A75F6005F74AF /* TweetViewModel.swift */; };
 		FAF2F8C0299A98A7005F74AF /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8BF299A98A7005F74AF /* ProfileController.swift */; };
 		FAF2F8C2299B3EC6005F74AF /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C1299B3EC6005F74AF /* ProfileHeader.swift */; };
+		FAF2F8C4299B617F005F74AF /* ProfileFilterVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C3299B617F005F74AF /* ProfileFilterVIew.swift */; };
+		FAF2F8C6299B6438005F74AF /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		FAF2F8BD299A75F6005F74AF /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		FAF2F8BF299A98A7005F74AF /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		FAF2F8C1299B3EC6005F74AF /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		FAF2F8C3299B617F005F74AF /* ProfileFilterVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterVIew.swift; sourceTree = "<group>"; };
+		FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,8 @@
 				FAF2F8B529994E84005F74AF /* CaptionTextView.swift */,
 				FAF2F8BB299A0E01005F74AF /* TweetCell.swift */,
 				FAF2F8C1299B3EC6005F74AF /* ProfileHeader.swift */,
+				FAF2F8C3299B617F005F74AF /* ProfileFilterVIew.swift */,
+				FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,7 +350,9 @@
 				FAF2F8A8299382CE005F74AF /* Utilities.swift in Sources */,
 				FAF2F8BA2999F025005F74AF /* Tweet.swift in Sources */,
 				FAF2F8BE299A75F6005F74AF /* TweetViewModel.swift in Sources */,
+				FAF2F8C6299B6438005F74AF /* ProfileFilterCell.swift in Sources */,
 				FAF2F8AC29954E10005F74AF /* Constants.swift in Sources */,
+				FAF2F8C4299B617F005F74AF /* ProfileFilterVIew.swift in Sources */,
 				FA8F85642992A41100B11798 /* RegistrationController.swift in Sources */,
 				FA8F853129920F9100B11798 /* NotificationsController.swift in Sources */,
 				FAF2F8BC299A0E01005F74AF /* TweetCell.swift in Sources */,
