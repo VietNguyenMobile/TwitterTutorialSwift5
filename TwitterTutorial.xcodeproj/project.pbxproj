@@ -38,6 +38,7 @@
 		FAF2F8C2299B3EC6005F74AF /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C1299B3EC6005F74AF /* ProfileHeader.swift */; };
 		FAF2F8C4299B617F005F74AF /* ProfileFilterVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C3299B617F005F74AF /* ProfileFilterVIew.swift */; };
 		FAF2F8C6299B6438005F74AF /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */; };
+		FAF2F8C8299B74B0005F74AF /* ProfileFilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		FAF2F8C1299B3EC6005F74AF /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		FAF2F8C3299B617F005F74AF /* ProfileFilterVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterVIew.swift; sourceTree = "<group>"; };
 		FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
+		FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF2F8BD299A75F6005F74AF /* TweetViewModel.swift */,
+				FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				FAF2F8B629994E84005F74AF /* CaptionTextView.swift in Sources */,
 				FAF2F8C2299B3EC6005F74AF /* ProfileHeader.swift in Sources */,
 				FA8F852D29920F0600B11798 /* FeedController.swift in Sources */,
+				FAF2F8C8299B74B0005F74AF /* ProfileFilterOptions.swift in Sources */,
 				FAF2F8C0299A98A7005F74AF /* ProfileController.swift in Sources */,
 				FA8F852B2991636E00B11798 /* MainTabController.swift in Sources */,
 				FAF2F8A8299382CE005F74AF /* Utilities.swift in Sources */,
