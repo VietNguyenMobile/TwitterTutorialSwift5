@@ -39,6 +39,7 @@
 		FAF2F8C4299B617F005F74AF /* ProfileFilterVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C3299B617F005F74AF /* ProfileFilterVIew.swift */; };
 		FAF2F8C6299B6438005F74AF /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */; };
 		FAF2F8C8299B74B0005F74AF /* ProfileFilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */; };
+		FAF2F8CA299B7A46005F74AF /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C9299B7A46005F74AF /* ProfileHeaderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		FAF2F8C3299B617F005F74AF /* ProfileFilterVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterVIew.swift; sourceTree = "<group>"; };
 		FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 		FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterOptions.swift; sourceTree = "<group>"; };
+		FAF2F8C9299B7A46005F74AF /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			children = (
 				FAF2F8BD299A75F6005F74AF /* TweetViewModel.swift */,
 				FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */,
+				FAF2F8C9299B7A46005F74AF /* ProfileHeaderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8F85132991601500B11798 /* ViewController.swift in Sources */,
+				FAF2F8CA299B7A46005F74AF /* ProfileHeaderViewModel.swift in Sources */,
 				FAF2F8B82999E6DF005F74AF /* TweetService.swift in Sources */,
 				FA8F855F29924D4400B11798 /* Extensions.swift in Sources */,
 				FA8F850F2991601500B11798 /* AppDelegate.swift in Sources */,
