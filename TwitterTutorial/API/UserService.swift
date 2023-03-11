@@ -30,12 +30,26 @@ struct UserService {
             
             let user = User(uid: uid, dictionary: dictionary)
             
-            print("DEBUG: Username is \(user.username)")
-            print("DEBUG: Fullname is \(user.fullname)")
-            print("DEBUG: ProfileImageUrl is \(user.profileImageUrl)")
-            print("DEBUG: Email is \(user.email)")
+//            print("DEBUG: Username is \(user.username)")
+//            print("DEBUG: Fullname is \(user.fullname)")
+//            print("DEBUG: ProfileImageUrl is \(user.profileImageUrl)")
+//            print("DEBUG: Email is \(user.email)")
             
             completion(user)
+        }
+    }
+    
+    func fetchUsers(completion: @escaping([User]) -> Void) {
+        REF_USERS.observe(.childAdded) { snapshot in
+//            print("DEBUG: fetchUsers \(snapshot)")
+            var users = [User]()
+            REF_USERS.observe(.childAdded) { snapshot in
+                let uid = snapshot.key
+                guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
+                let user = User(uid: uid, dictionary: dictionary)
+                users.append(user)
+                completion(users)
+            }
         }
     }
 }
