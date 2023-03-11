@@ -22,6 +22,7 @@
 		FA8F855F29924D4400B11798 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F855E29924D4400B11798 /* Extensions.swift */; };
 		FA8F85622992A30D00B11798 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F85612992A30D00B11798 /* LoginController.swift */; };
 		FA8F85642992A41100B11798 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F85632992A41100B11798 /* RegistrationController.swift */; };
+		FAC9A50F29BB133F00057E78 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC9A50E29BB133F00057E78 /* UserCell.swift */; };
 		FAF2F8A8299382CE005F74AF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8A7299382CE005F74AF /* Utilities.swift */; };
 		FAF2F8AA2994D3E2005F74AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAF2F8A92994D3E2005F74AF /* GoogleService-Info.plist */; };
 		FAF2F8AC29954E10005F74AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8AB29954E10005F74AF /* Constants.swift */; };
@@ -62,6 +63,7 @@
 		FA8F855E29924D4400B11798 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FA8F85612992A30D00B11798 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		FA8F85632992A41100B11798 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		FAC9A50E29BB133F00057E78 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		FAF2F8A7299382CE005F74AF /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		FAF2F8A92994D3E2005F74AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAF2F8AB29954E10005F74AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				FAF2F8C1299B3EC6005F74AF /* ProfileHeader.swift */,
 				FAF2F8C3299B617F005F74AF /* ProfileFilterVIew.swift */,
 				FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */,
+				FAC9A50E29BB133F00057E78 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				FA8F852B2991636E00B11798 /* MainTabController.swift in Sources */,
 				FAF2F8A8299382CE005F74AF /* Utilities.swift in Sources */,
 				FAF2F8BA2999F025005F74AF /* Tweet.swift in Sources */,
+				FAC9A50F29BB133F00057E78 /* UserCell.swift in Sources */,
 				FAF2F8BE299A75F6005F74AF /* TweetViewModel.swift in Sources */,
 				FAF2F8C6299B6438005F74AF /* ProfileFilterCell.swift in Sources */,
 				FAF2F8AC29954E10005F74AF /* Constants.swift in Sources */,
