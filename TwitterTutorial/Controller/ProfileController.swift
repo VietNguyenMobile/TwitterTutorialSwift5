@@ -36,6 +36,7 @@ class ProfileController: UICollectionViewController {
         super.viewDidLoad()
         configureCollectionView()
         fetchTweets()
+        checkIfUserIsFollowed()
         
         print("DEBUG: User is \(user.username)")
     }
@@ -57,6 +58,13 @@ class ProfileController: UICollectionViewController {
             print("DEBUG: Api call completed..")
             print("DEBUG: Tweets are \(tweets)")
             self.tweets = tweets
+        }
+    }
+    
+    func checkIfUserIsFollowed() {
+        UserService.shared.checkIfUserIsFollowed(uid: user.uid) { isFollowed in
+            self.user.isFollowed = isFollowed
+            self.collectionView.reloadData()
         }
     }
     
@@ -129,12 +137,16 @@ extension ProfileController: ProfileHeaderDelegate {
                 print("DEBUG: Did unfollow user in backend..")
                 self.user.isFollowed = false
                 print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
+//                header.editProfileFllowButton.setTitle("Follow", for: .normal)
+                self.collectionView.reloadData()
             }
         } else {
             UserService.shared.followUser(uid: user.uid) { (ref, err) in
                 print("DEBUG: Did complete follow in backend..")
                 self.user.isFollowed = true
                 print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
+//                header.editProfileFllowButton.setTitle("Following", for: .normal)
+                self.collectionView.reloadData()
             }
         }
     }

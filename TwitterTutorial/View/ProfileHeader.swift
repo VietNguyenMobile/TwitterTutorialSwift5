@@ -56,7 +56,7 @@ class ProfileHeader: UICollectionReusableView {
         return iv
     }()
     
-    private lazy var editProfileFllowButton: UIButton = {
+    lazy var editProfileFllowButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Following", for: .normal)
         button.layer.borderWidth = 1.25
@@ -189,6 +189,9 @@ class ProfileHeader: UICollectionReusableView {
     // MARK: - Helpers
     func configure() {
         guard let user = user else { return }
+        
+        print("DEBUG: Did set ProfileHeader called ..")
+        
         let viewModel = ProfileHeaderViewModel(user: user)
         
         profileImageView.sd_setImage(with: user.profileImageUrl)
