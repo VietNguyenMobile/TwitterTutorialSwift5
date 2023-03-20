@@ -83,4 +83,21 @@ struct UserService {
             completion(snapshot.exists())
         }
     }
+    
+    func fetchUserStates(uid: String, completion: @escaping(UserRelationStats) -> Void) {
+        REF_USER_FOLLOWERS.child(uid).observeSingleEvent(of: .value) { snapshot in
+            let followers = snapshot.children.allObjects.count
+            
+            print("DEBUG: Followers count is \(followers)")
+            
+            REF_USER_FOLLOWING.child(uid).observeSingleEvent(of: .value) { snapshot in
+                let following = snapshot.children.allObjects.count
+                print("DEBUG: Following \(following) people")
+                
+                let stats = UserRelationStats(followers: followers, following: following)
+                
+                completion(stats)
+            }
+        }
+    }
 }
