@@ -132,6 +132,11 @@ extension ProfileController: ProfileHeaderDelegate {
         
 //        user.isFollowed.toggle()
         
+        if user.isCurrentUser {
+            print("DEBUG: Show edit profile controller ..")
+            return
+        }
+        
         if user.isFollowed {
             UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in
                 print("DEBUG: Did unfollow user in backend..")
