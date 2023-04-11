@@ -15,6 +15,7 @@ class TweetController: UICollectionViewController {
     // MARK: - Properties
     
     private let tweet: Tweet
+    private let actionSheetLauncher: ActionSheetLauncher
     private var replies = [Tweet]() {
         didSet { collectionView.reloadData() }
     }
@@ -22,6 +23,7 @@ class TweetController: UICollectionViewController {
     // MARK: - Lifecycle
     init(tweet: Tweet) {
         self.tweet = tweet
+        self.actionSheetLauncher = ActionSheetLauncher(user: tweet.user)
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
     
@@ -91,5 +93,11 @@ extension TweetController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 120)
+    }
+}
+
+extension TweetController: TweetHeaderDelegate {
+    func showActionSheet() {
+        actionSheetLauncher.show()
     }
 }
