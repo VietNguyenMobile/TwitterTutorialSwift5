@@ -22,6 +22,7 @@ struct ActionSheetViewModel {
         }
         
         results.append(.report)
+//        results.append(.blockUser)
         
         return results
     }
@@ -36,6 +37,7 @@ enum ActionSheetOptions {
     case unfollow(User)
     case report
     case delete
+    case blockUser
     
     var description: String {
         switch self {
@@ -43,6 +45,7 @@ enum ActionSheetOptions {
         case .unfollow(let user): return "Unfollow @\(user.username)"
         case .report: return "Report Tweet"
         case .delete: return "Delete Tweet"
+        case .blockUser: return "Block User"
         }
     }
 }
