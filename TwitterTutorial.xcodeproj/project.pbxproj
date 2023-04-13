@@ -10,6 +10,7 @@
 		CEB78FA5C6D33E3CF75F7D16 /* Pods_TwitterTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F0471FB16E59429D2B66A3 /* Pods_TwitterTutorial.framework */; };
 		FA03D93829E53FFC009387FF /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03D93729E53FFC009387FF /* ActionSheetLauncher.swift */; };
 		FA03D93A29E55C3F009387FF /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03D93929E55C3F009387FF /* ActionSheetCell.swift */; };
+		FA03D93C29E79AA8009387FF /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03D93B29E79AA8009387FF /* ActionSheetViewModel.swift */; };
 		FA8F850F2991601500B11798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F850E2991601500B11798 /* AppDelegate.swift */; };
 		FA8F85112991601500B11798 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F85102991601500B11798 /* SceneDelegate.swift */; };
 		FA8F85132991601500B11798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F85122991601500B11798 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		99F0471FB16E59429D2B66A3 /* Pods_TwitterTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA03D93729E53FFC009387FF /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		FA03D93929E55C3F009387FF /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
+		FA03D93B29E79AA8009387FF /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
 		FA8F850B2991601500B11798 /* TwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8F850E2991601500B11798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8F85102991601500B11798 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */,
 				FAF2F8C9299B7A46005F74AF /* ProfileHeaderViewModel.swift */,
 				FAC9A51429CF0A6D00057E78 /* UploadTweetViewModel.swift */,
+				FA03D93B29E79AA8009387FF /* ActionSheetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				FAF2F8AC29954E10005F74AF /* Constants.swift in Sources */,
 				FAF2F8C4299B617F005F74AF /* ProfileFilterVIew.swift in Sources */,
 				FA8F85642992A41100B11798 /* RegistrationController.swift in Sources */,
+				FA03D93C29E79AA8009387FF /* ActionSheetViewModel.swift in Sources */,
 				FA8F853129920F9100B11798 /* NotificationsController.swift in Sources */,
 				FAC9A51329C945A800057E78 /* TweetHeader.swift in Sources */,
 				FAF2F8BC299A0E01005F74AF /* TweetCell.swift in Sources */,

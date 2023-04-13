@@ -15,7 +15,7 @@ class TweetController: UICollectionViewController {
     // MARK: - Properties
     
     private let tweet: Tweet
-    private let actionSheetLauncher: ActionSheetLauncher
+    private var actionSheetLauncher: ActionSheetLauncher!
     private var replies = [Tweet]() {
         didSet { collectionView.reloadData() }
     }
@@ -23,7 +23,7 @@ class TweetController: UICollectionViewController {
     // MARK: - Lifecycle
     init(tweet: Tweet) {
         self.tweet = tweet
-        self.actionSheetLauncher = ActionSheetLauncher(user: tweet.user)
+//        self.actionSheetLauncher = ActionSheetLauncher(user: tweet.user)
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
     
@@ -53,6 +53,12 @@ class TweetController: UICollectionViewController {
         collectionView.register(TweetHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: headerIdentifier)
+    }
+    
+    fileprivate func showActionSheet(forUser user: User) {
+        actionSheetLauncher = ActionSheetLauncher(user: user)
+        actionSheetLauncher.delegate = self
+        actionSheetLauncher.show()
     }
 }
 
@@ -97,9 +103,27 @@ extension TweetController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: - TweetHeaderDelegate
+
 extension TweetController: TweetHeaderDelegate {
     func showActionSheet() {
-        print("DEBUG: TweetController showActionSheet")
-        actionSheetLauncher.show()
+//        actionSheetLauncher.show()
+        if tweet.user.isCurrentUser {
+            showActionSheet(forUser: tweet.user)
+        } else {
+            UserService.shared.checkIfUserIsFollowed(uid: tweet.user.uid) { isFollowed in
+                var user = self.tweet.user
+                user.isFollowed = isFollowed
+                self.showActionSheet(forUser: user)
+            }
+        }
+    }
+}
+
+// MARK: - ActionSheetLauncherDelegate
+
+extension TweetController: ActionSheetLauncherDelegate {
+    func didSelect(option: ActionSheetOptions) {
+        print("DEBUG: Option is controller is \(option.description)")
     }
 }
