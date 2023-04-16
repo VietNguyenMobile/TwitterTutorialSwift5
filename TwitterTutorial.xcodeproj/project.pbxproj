@@ -11,6 +11,7 @@
 		FA03D93829E53FFC009387FF /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03D93729E53FFC009387FF /* ActionSheetLauncher.swift */; };
 		FA03D93A29E55C3F009387FF /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03D93929E55C3F009387FF /* ActionSheetCell.swift */; };
 		FA03D93C29E79AA8009387FF /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03D93B29E79AA8009387FF /* ActionSheetViewModel.swift */; };
+		FA03D93E29EBE7E2009387FF /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03D93D29EBE7E2009387FF /* Notification.swift */; };
 		FA8F850F2991601500B11798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F850E2991601500B11798 /* AppDelegate.swift */; };
 		FA8F85112991601500B11798 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F85102991601500B11798 /* SceneDelegate.swift */; };
 		FA8F85132991601500B11798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F85122991601500B11798 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		FA03D93729E53FFC009387FF /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		FA03D93929E55C3F009387FF /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		FA03D93B29E79AA8009387FF /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
+		FA03D93D29EBE7E2009387FF /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		FA8F850B2991601500B11798 /* TwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8F850E2991601500B11798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8F85102991601500B11798 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				FAF2F8B129989DD5005F74AF /* User.swift */,
 				FAF2F8B92999F025005F74AF /* Tweet.swift */,
+				FA03D93D29EBE7E2009387FF /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				FAC9A51529CF0A6D00057E78 /* UploadTweetViewModel.swift in Sources */,
 				FAF2F8BA2999F025005F74AF /* Tweet.swift in Sources */,
 				FAC9A50F29BB133F00057E78 /* UserCell.swift in Sources */,
+				FA03D93E29EBE7E2009387FF /* Notification.swift in Sources */,
 				FAF2F8BE299A75F6005F74AF /* TweetViewModel.swift in Sources */,
 				FAF2F8C6299B6438005F74AF /* ProfileFilterCell.swift in Sources */,
 				FAF2F8AC29954E10005F74AF /* Constants.swift in Sources */,
