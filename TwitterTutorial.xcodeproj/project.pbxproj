@@ -49,6 +49,7 @@
 		FAF2F8C6299B6438005F74AF /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */; };
 		FAF2F8C8299B74B0005F74AF /* ProfileFilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */; };
 		FAF2F8CA299B7A46005F74AF /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C9299B7A46005F74AF /* ProfileHeaderViewModel.swift */; };
+		FAF52B7C2A00DC46008EF9FF /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF52B7B2A00DC46008EF9FF /* NotificationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		FAF2F8C5299B6438005F74AF /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 		FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterOptions.swift; sourceTree = "<group>"; };
 		FAF2F8C9299B7A46005F74AF /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
+		FAF52B7B2A00DC46008EF9FF /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 				FAC9A50E29BB133F00057E78 /* UserCell.swift */,
 				FAC9A51229C945A800057E78 /* TweetHeader.swift */,
 				FA03D93929E55C3F009387FF /* ActionSheetCell.swift */,
+				FAF52B7B2A00DC46008EF9FF /* NotificationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				FAF2F8C6299B6438005F74AF /* ProfileFilterCell.swift in Sources */,
 				FAF2F8AC29954E10005F74AF /* Constants.swift in Sources */,
 				FAF2F8C4299B617F005F74AF /* ProfileFilterVIew.swift in Sources */,
+				FAF52B7C2A00DC46008EF9FF /* NotificationCell.swift in Sources */,
 				FA8F85642992A41100B11798 /* RegistrationController.swift in Sources */,
 				FA03D93C29E79AA8009387FF /* ActionSheetViewModel.swift in Sources */,
 				FA8F853129920F9100B11798 /* NotificationsController.swift in Sources */,
