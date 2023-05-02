@@ -12,7 +12,7 @@ import FirebaseDatabase
 struct NotificationService {
     static let shared = NotificationService()
     
-    func uploadNotification(type: NotificationType, tweet: Tweet? = nil) {
+    func uploadNotification(type: NotificationType, tweet: Tweet? = nil, user: User? = nil) {
         print("DEBUG: Type is \(type)")
         
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -24,8 +24,8 @@ struct NotificationService {
         if let tweet = tweet {
             values["tweetID"] = tweet.tweetID
             REF_NOTIFICATIONS.child(tweet.user.uid).childByAutoId().updateChildValues(values)
-        } else {
-             
+        } else if let user = user {
+            REF_NOTIFICATIONS.child(user.uid).childByAutoId().updateChildValues(values)
         }
     }
 }

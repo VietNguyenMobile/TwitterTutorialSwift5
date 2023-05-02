@@ -154,6 +154,7 @@ extension ProfileController: ProfileHeaderDelegate {
                 print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
 //                header.editProfileFllowButton.setTitle("Follow", for: .normal)
                 self.collectionView.reloadData()
+                
             }
         } else {
             UserService.shared.followUser(uid: user.uid) { (ref, err) in
@@ -162,6 +163,8 @@ extension ProfileController: ProfileHeaderDelegate {
                 print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
 //                header.editProfileFllowButton.setTitle("Following", for: .normal)
                 self.collectionView.reloadData()
+                
+                NotificationService.shared.uploadNotification(type: .follow, user: self.user)
             }
         }
     }
