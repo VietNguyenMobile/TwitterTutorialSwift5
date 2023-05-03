@@ -50,6 +50,7 @@
 		FAF2F8C8299B74B0005F74AF /* ProfileFilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */; };
 		FAF2F8CA299B7A46005F74AF /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F8C9299B7A46005F74AF /* ProfileHeaderViewModel.swift */; };
 		FAF52B7C2A00DC46008EF9FF /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF52B7B2A00DC46008EF9FF /* NotificationCell.swift */; };
+		FAF52B7E2A01F1F3008EF9FF /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF52B7D2A01F1F3008EF9FF /* NotificationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		FAF2F8C7299B74B0005F74AF /* ProfileFilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterOptions.swift; sourceTree = "<group>"; };
 		FAF2F8C9299B7A46005F74AF /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		FAF52B7B2A00DC46008EF9FF /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		FAF52B7D2A01F1F3008EF9FF /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 				FAF2F8C9299B7A46005F74AF /* ProfileHeaderViewModel.swift */,
 				FAC9A51429CF0A6D00057E78 /* UploadTweetViewModel.swift */,
 				FA03D93B29E79AA8009387FF /* ActionSheetViewModel.swift */,
+				FAF52B7D2A01F1F3008EF9FF /* NotificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			files = (
 				FA8F85132991601500B11798 /* ViewController.swift in Sources */,
 				FAF2F8CA299B7A46005F74AF /* ProfileHeaderViewModel.swift in Sources */,
+				FAF52B7E2A01F1F3008EF9FF /* NotificationViewModel.swift in Sources */,
 				FAF2F8B82999E6DF005F74AF /* TweetService.swift in Sources */,
 				FA8F855F29924D4400B11798 /* Extensions.swift in Sources */,
 				FA8F850F2991601500B11798 /* AppDelegate.swift in Sources */,
