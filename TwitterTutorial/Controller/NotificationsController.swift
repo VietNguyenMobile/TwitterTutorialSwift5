@@ -36,17 +36,21 @@ class NotificationsController: UITableViewController {
     // MARK: - API
     
     func fetchNotifications() {
+        self.refreshControl?.beginRefreshing()
         NotificationService.shared.fetchNotifications { notifications in
+            self.refreshControl?.endRefreshing()
             self.notifications = notifications
-            
-            for (index, notification) in notifications.enumerated() {
-                if case .follow = notification.type {
-                    print("DEBUG: Configure user is followed ..")
-                    let user = notification.user
-                    
-                    UserService.shared.checkIfUserIsFollowed(uid: user.uid) { isFollowed in
-                        self.notifications[index].user.isFollowed = isFollowed
-                    }
+            self.checkIfUserIsFollowed(notifications: notifications)
+        }
+    }
+    
+    func checkIfUserIsFollowed(notifications: [Notification]) {
+        for (index, notification) in notifications.enumerated() {
+            if case .follow = notification.type {
+                print("DEBUG: Configure user is followed ..")
+                let user = notification.user
+                UserService.shared.checkIfUserIsFollowed(uid: user.uid) { isFollowed in
+                    self.notifications[index].user.isFollowed = isFollowed
                 }
             }
         }
@@ -62,6 +66,18 @@ class NotificationsController: UITableViewController {
         tableView.rowHeight = 60
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+        
+        let refreshControl = UIRefreshControl()
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+    }
+    
+    // MARK: - Selectors
+    
+    @objc func handleRefresh() {
+        print("DEBUG: Wants to refresh ..")
+//        refreshControl?.endRefreshing()
+        fetchNotifications()
     }
 }
 
@@ -99,6 +115,23 @@ extension NotificationsController {
 extension NotificationsController: NotificationCellDelegate {
     func didTapFollow(_ cell: NotificationCell) {
         print("DEBUG: Handle follow tap..")
+        
+        guard let user = cell.notification?.user else { return }
+        print("DEBUG: User is followed \(user.isFollowed)")
+        
+        if user.isFollowed {
+            print("DEBUG: Handle unfollow")
+            UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in
+                print("DEBUG: Did unfollow user in backend..")
+                cell.notification?.user.isFollowed = false
+            }
+        } else {
+            print("DEBUG: Handle follow")
+            UserService.shared.followUser(uid: user.uid) { (ref, err) in
+                print("DEBUG: Did complete follow in backend..")
+                cell.notification?.user.isFollowed = true
+            }
+        }
     }
     
     func didTapProfileImage(_ cell: NotificationCell) {
