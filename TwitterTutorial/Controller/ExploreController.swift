@@ -67,10 +67,6 @@ class ExploreController: UITableViewController {
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.rowHeight = 60
         tableView.separatorStyle = .none
- 
-//        UINavigationBar.appearance().barTintColor = .black
-//        UINavigationBar.appearance().tintColor = .white
-//        UINavigationBar.appearance().isTranslucent = true
     }
     
     func configureSearchController() {

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NotificationCellDelegate: class {
+    func didTapProfileImage(_ cell: NotificationCell)
+}
+
 class NotificationCell: UITableViewCell {
     
     // MARK: - Propertiest
@@ -17,15 +21,17 @@ class NotificationCell: UITableViewCell {
         }
     }
     
+    weak var delegate: NotificationCellDelegate?
+    
     private lazy var profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
-        iv.setDimensions(width: 40, height: 40)
-        iv.layer.cornerRadius = 40 / 2
+        iv.setDimensions(width: 48, height: 48)
+        iv.layer.cornerRadius = 48 / 2
         iv.backgroundColor = .twitterBlue
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleProfileImageTapped))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapProfileImage))
         iv.addGestureRecognizer(tap)
         iv.isUserInteractionEnabled = true
         return iv
@@ -38,6 +44,7 @@ class NotificationCell: UITableViewCell {
         label.text = "Some test notification message"
         return label
     }()
+    
     
     // MARK: - Lifecycle
     
@@ -59,13 +66,15 @@ class NotificationCell: UITableViewCell {
     
     // MARK: - Selector
     
-    @objc func handleProfileImageTapped() {
-        
+    @objc func didTapProfileImage() {
+        print("DEBUG: 1111111")
+        delegate?.didTapProfileImage(self)
     }
     
     // Mark: - Helpers
     
     func configure() {
+        print("DEBUG: Did set notification in cell..")
         guard let notification = notification else { return }
         let viewModel = NotificationViewModel(notification: notification)
         

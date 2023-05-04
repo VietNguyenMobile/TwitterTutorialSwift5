@@ -109,7 +109,10 @@ class TweetCell: UICollectionViewCell {
         infoLabel.font = UIFont.systemFont(ofSize: 14)
         infoLabel.text = "Eddie Brock @venom"
         
-        let actionStack = UIStackView(arrangedSubviews: [commentButton, retweetButton, likeButton, shareButton])
+        let actionStack = UIStackView(arrangedSubviews: [commentButton,
+                                                         retweetButton,
+                                                         likeButton,
+                                                         shareButton])
         actionStack.axis = .horizontal
         actionStack.spacing = 72
         
